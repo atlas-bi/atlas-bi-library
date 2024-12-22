@@ -115,7 +115,7 @@ jobs:
 
       - name: upload cov
         if: always()
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           files: ./coverage.cobertura.xml
           verbose: true
@@ -233,7 +233,7 @@ jobs:
 
       - name: upload cov
         if: always()
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           files: ./coverage.cobertura.xml
           verbose: true
