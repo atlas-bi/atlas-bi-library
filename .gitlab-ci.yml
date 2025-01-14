@@ -13,7 +13,7 @@ stages:
   - publish
 
 precommit:
-  image: mcr.microsoft.com/dotnet/sdk:8.0-alpine
+  image: mcr.microsoft.com/dotnet/sdk:9.0-alpine
   stage: test
   except:
     - public
@@ -40,7 +40,7 @@ precommit:
     - pre-commit run stylelint --all-files
 
 build_web:
-  image: mcr.microsoft.com/dotnet/sdk:8.0-alpine
+  image: mcr.microsoft.com/dotnet/sdk:9.0-alpine
   stage: build
   except:
     - public
