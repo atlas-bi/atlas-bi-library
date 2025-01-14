@@ -10,7 +10,7 @@
 # to access webapp
 # http://localhost:1234
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0-alpine AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0-alpine AS build
 ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 WORKDIR /app
@@ -43,7 +43,7 @@ RUN  export PATH="$PATH:/root/.dotnet/tools" && dotnet ef database update --proj
 
 RUN dotnet publish -c Release -o out web.csproj
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0-alpine
+FROM mcr.microsoft.com/dotnet/sdk:9.0-alpine
 ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
 WORKDIR /app
 COPY --from=build ["/app/web/out", "./"]
