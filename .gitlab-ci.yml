@@ -73,7 +73,7 @@ deploy_test:
 
 public:
   stage: publish
-  image: python:3.12
+  image: python:3.13
   needs:
     - job: build_web
       artifacts: false
@@ -116,7 +116,7 @@ github:
   only:
     - public # public branch
   stage: publish
-  image: python:3.12
+  image: python:3.13
   before_script:
     - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
     - eval $(ssh-agent -s)

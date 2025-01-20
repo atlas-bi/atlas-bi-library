@@ -10,7 +10,7 @@
 # to access webapp
 # http://localhost:8983
 
-FROM python:3.12-alpine as search
+FROM python:3.13-alpine as search
 WORKDIR /app
 ARG USER
 ARG PASSWORD
