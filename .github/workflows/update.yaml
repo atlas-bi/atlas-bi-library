@@ -18,7 +18,7 @@ jobs:
           git fetch origin ${{github.ref_name}}:${{github.ref_name}}
           git reset --hard ${{github.ref_name}}
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6.0.5
+        uses: peter-evans/create-pull-request@v6.1.0
         with:
           labels: automated pr
           branch: ${{github.ref_name}}
@@ -36,7 +36,7 @@ jobs:
           git fetch origin ${{github.ref_name}}:${{github.ref_name}}
           git reset --hard ${{github.ref_name}}
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6.0.5
+        uses: peter-evans/create-pull-request@v6.1.0
         with:
           labels: automated pr
           branch: ${{github.ref_name}}

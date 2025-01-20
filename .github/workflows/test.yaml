@@ -55,7 +55,7 @@ jobs:
           echo "}}" >> appsettings.cust.json
           cat appsettings.cust.json
       - name: install localdb
-        uses: potatoqualitee/mssqlsuite@v1.7
+        uses: potatoqualitee/mssqlsuite@v1.8
         with:
           install: localdb
       - name: migrate
